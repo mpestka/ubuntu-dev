@@ -65,6 +65,15 @@ RUN echo "set term=ansi" >> ~/.vimrc && \
 #    firewallforcode/deployment/v2 -> pip install -r requirements.txt
 #    firewallforcode/ui-backend -> pip install -r requirements.txt
 
+# required for deployment script deploy.py:
+RUN pip install pyyaml && \
+    pip install boto3 && \
+    pip install retrying && \
+    pip install fabric && \
+    pip install requests && \
+    pip install sh && \
+    pip install slackclient && \
+    pip install ruamel.yaml
 
 
 
