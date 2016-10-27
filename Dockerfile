@@ -59,22 +59,20 @@ RUN echo "set term=ansi" >> ~/.vimrc && \
     gem install saas && \
     gem install compass
 
-#
-#    TODO: all the python requirements below:
-#    firewallforcode/mdm -> pip install -r requirements.txt
-#    firewallforcode/deployment/v2 -> pip install -r requirements.txt
-#    firewallforcode/ui-backend -> pip install -r requirements.txt
-
 # required for deployment script deploy.py:
-RUN pip install pyyaml && \
+RUN pip install --upgrade pip && \
+    pip install pyyaml && \
     pip install boto3 && \
     pip install retrying && \
     pip install fabric && \
     pip install requests && \
     pip install sh && \
     pip install slackclient && \
-    pip install ruamel.yaml
-
+    pip install ruamel.yaml && \
+    pip install pyprind && \
+    pip install coloredlogs && \
+    pip install boto && \
+    pip install awscli
 
 
 
