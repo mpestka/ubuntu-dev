@@ -72,7 +72,8 @@ RUN pip install --upgrade pip && \
     pip install pyprind && \
     pip install coloredlogs && \
     pip install boto && \
-    pip install awscli
+    pip install awscli && \
+    pip install awsebcli
 
 
 
